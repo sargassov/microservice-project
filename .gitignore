@@ -1,0 +1,5 @@
+# Project exclude paths
+/cloud-common/target/
+/discovery-service/target/
+/front-service/target/
+/products-service/target/
