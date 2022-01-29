@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/v1/products")
 @EnableEurekaClient
 @RequiredArgsConstructor
-//@CrossOrigin("*") // Homework: *
+@CrossOrigin("*")
 public class FrontController {
     @Autowired
     private RestTemplate restTemplate;
@@ -27,8 +27,6 @@ public class FrontController {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
-
-//    private static final Function<Product, ProductDto> mapper = p -> new ProductDto(p.getId(), p.getTitle(), p.getPrice());
 
     @GetMapping
     public List<ProductDto> findAll() {
